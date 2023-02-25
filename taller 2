@@ -1,31 +1,29 @@
 #include <iostream>
-#include <cstdlib> // 
-#include <ctime> //
+#include <cstdlib> 
+#include <ctime> 
 
 using namespace std;
 
+
+//structura con info del conjunto
 struct Conjunto {
     int tamano;
     int max_valor;
     int *numeros;
 };
 
-
-
+Conjunto randomarray(conujuntoT.tamano, int max_valor);
 
 
 int main() {
-   int m;
-   cout <<"ingrese cantidad: ";
-   cin >> m;
-    int* array = randomarray(m); //llamar funcion con un tamaño m
 
-    // Imprimir arreglo generado
-    for (int i = 0; i < 10; i++) {
-        cout << array[i] << " ";
-    }
+    Conjunto conjuntoT
+   cout << "Ingrese el tamano del conjunto: ";
+    cin >> conjuntoT.tamano;
+
     cout << endl;
     
+    //do while para poder salir del menu, y switch - case para hacer el menu
     do {
       cout << "Menu:" << endl;
         cout << "1. Generar conjunto de numeros aleatorios" << endl;
@@ -37,10 +35,11 @@ int main() {
           switch(op) {
           
             case 1:
-                array:
+                randomarray(conjuntoT.tamano,20);
+       
             break;
             case 2:
-                histograma
+                histograma()
             break;
             case 3:
                   cout << "Saliendo del programa" << endl;
@@ -51,16 +50,35 @@ int main() {
     return 0;
 }
 
-int* randomarray(int n) {
-    
-    int* arr =  int[n];
+    //funcion para generar numeros random para el conjunto
+Conjunto randomarray(conjuntoT.tamano, int max_valor) {
+     Conjunto conjuntoT;
+    tamano = conjuntoT.tamano
+    conjuntoT.max valor = max_valor;
+    conjuntoT.numeros = int numeros[tamano];
+    int array =  numeros[tamano];
 
     // para crear los valores aleatorios del 0 al 20
     srand(time(NULL));
-    for (int i = 0; i < n; i++) {
-        array[i] = rand() % 21;
+    for (int i = 0; i < tamano; i++) {
+        conjuntoT.numeros[i] = rand() % (max_valor + 1);
     }
 
-    return array;
+
+    }
+    
+    return conjuntoT;
 }
 
+// para generar histograma
+Conjunto Histograma(Conjunto conjuntoT) {
+    int r[max_valor+1] = {0};
+
+    // Contardor de frecuencia
+    for (int i = 0; i < conjuntoT.tamano; i++) {
+       r[conjuntoT.numeros[i]]++;
+    }
+
+    // Imprimir el histograma
+    cout << "Histograma del conjunto de numeros aleatorios:" << endl;
+    
