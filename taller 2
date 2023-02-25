@@ -39,7 +39,7 @@ int main() {
        
             break;
             case 2:
-                histograma(Conjunto conjuntoT);
+                histograma(conjuntoT);
             break;
             case 3:
                   cout << "Saliendo del programa" << endl;
