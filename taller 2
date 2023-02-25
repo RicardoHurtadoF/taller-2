@@ -11,17 +11,19 @@ struct Conjunto {
     int max_valor;
     int *numeros;
 };
+Conjunto randomarray(int tamano, int max_valor);
 
-Conjunto randomarray(conujuntoT.tamano, int max_valor);
 Conjunto histograma(Conjunto conjuntoT);
 
 int main() {
 
-    Conjunto conjuntoT
+    Conjunto conjuntoT;
    cout << "Ingrese el tamano del conjunto: ";
     cin >> conjuntoT.tamano;
-
+        int tamano = conjuntoT.tamano;
     cout << endl;
+    int op;
+      
     
     //do while para poder salir del menu, y switch - case para hacer el menu
     do {
@@ -30,12 +32,12 @@ int main() {
         cout << "2. Mostrar histograma del conjunto" << endl;
         cout << "3. Salir" << endl;
         cout << "Ingrese una opcion: ";
-        cin >> int op;
+        cin >> op;
         
           switch(op) {
           
             case 1:
-                randomarray(conjuntoT.tamano,20);
+              Conjunto conjuntoT = randomarray(tamano,20);
        
             break;
             case 2:
@@ -45,15 +47,15 @@ int main() {
                   cout << "Saliendo del programa" << endl;
             break;
             
-            } while(opcion != 3);
+            } while(op != 3);
 
     return 0;
 }
 
     //funcion para generar numeros random para el conjunto
-Conjunto randomarray(conjuntoT.tamano, int max_valor) {
+Conjunto randomarray( int tamano, int max_valor) {
      Conjunto conjuntoT;
-    tamano = conjuntoT.tamano
+    conjuntoT.tamano = tamano 
     conjuntoT.max valor = max_valor;
     conjuntoT.numeros = int numeros[tamano];
     int array =  numeros[tamano];
@@ -81,4 +83,11 @@ Conjunto histograma(Conjunto conjuntoT) {
 
     // Imprimir el histograma
     cout << "Histograma del conjunto de numeros aleatorios:" << endl;
-    
+    for (int i = 0; i <= conjuntoT.max_valor; i++) {
+        cout << i << ": " << conjuntoT.numeros[i];
+        for (int j = 0; j < frequency[i]; j++) {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
