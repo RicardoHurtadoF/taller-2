@@ -13,7 +13,7 @@ struct Conjunto {
 };
 
 Conjunto randomarray(conujuntoT.tamano, int max_valor);
-
+Conjunto histograma(Conjunto conjuntoT);
 
 int main() {
 
@@ -39,7 +39,7 @@ int main() {
        
             break;
             case 2:
-                histograma()
+                histograma(Conjunto conjuntoT);
             break;
             case 3:
                   cout << "Saliendo del programa" << endl;
@@ -71,7 +71,7 @@ Conjunto randomarray(conjuntoT.tamano, int max_valor) {
 }
 
 // para generar histograma
-Conjunto Histograma(Conjunto conjuntoT) {
+Conjunto histograma(Conjunto conjuntoT) {
     int r[max_valor+1] = {0};
 
     // Contardor de frecuencia
