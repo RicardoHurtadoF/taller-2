@@ -26,6 +26,7 @@ int main() {
     }
     cout << endl;
     
+    do {
       cout << "Menu:" << endl;
         cout << "1. Generar conjunto de numeros aleatorios" << endl;
         cout << "2. Mostrar histograma del conjunto" << endl;
@@ -36,11 +37,17 @@ int main() {
           switch(op) {
           
             case 1:
+                array:
             break;
             case 2:
+                histograma
             break;
             case 3:
+                  cout << "Saliendo del programa" << endl;
             break;
+            
+            } while(opcion != 3);
+
     return 0;
 }
 
